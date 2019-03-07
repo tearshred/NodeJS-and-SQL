@@ -1,7 +1,23 @@
-INSERT INTO  products (product_name, department_name, price, stock_quantity)
-VALUES ("strawberries", "produce", 75, 100), ("bananas", "produce", 20, 75), ("kiwi", "produce", 15, 100), ("pistachios", "nuts", 10, 10);
+DROP DATABASE IF EXISTS bamazon;
 
-INSERT INTO  products (product_name, department_name, price, stock_quantity)
-VALUES ("watermelon", "produce", 20, 200), ("orange", "produce", 30, 40), ("cashews", "nuts", 15, 300), ("chicken", "poultry", 200, 50), ("steak", "meat", 50, 10), ("pizza", "frozen foods", 30, 200);
+CREATE DATABASE bamazon;
 
-select * from products;
+  USE bamazon;
+
+CREATE TABLE products (
+  item_id INT NOT NULL AUTO_INCREMENT,
+  product_name VARCHAR(50) NULL,
+  department VARCHAR(50) NULL,
+  price FLOAT NULL,
+  stock_quantity INT NULL,
+  PRIMARY KEY (item_id)
+);
+
+INSERT INTO products (product_name, department, price, stock_quantity)
+      VALUE("Milwaukee 12-Set Toolbox","Home Imrpovement", 349.99, 15);
+
+INSERT INTO products (product_name, department, price, stock_quantity)
+  VALUE("Colgate Electric Toothbrush","Electronics", 39.99, 25);
+
+INSERT INTO products (product_name, department, price, stock_quantity)
+  VALUE("Samsung 860 EVO 500GB 2.5 Inch SATA III Internal SSD (MZ-76E500B/AM)","Computer Accessories", 79.99, 13);
